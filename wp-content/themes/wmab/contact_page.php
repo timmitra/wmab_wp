@@ -10,6 +10,21 @@ if(isset($_POST['submitted'])) {
 	//If there is no error, send the email
 	if(!isset($hasError)) {
 
+		// Check if phone is not NUMERIC
+		if(!empty($_POST['phone'])) {
+			// if not empty check the phone format
+			if (!eregi("^([0-9]?[0-9]?-)?[0-9]{3}-[0-9]{3}-[0-9]{4}$", trim($_POST['phone']))) {
+				$emailError = '<br />Please enter a valid phone number.';
+				$hasError = true;
+			} else {
+				if(function_exists('stripslashes')) {
+					$comments = stripslashes(trim($_POST['phone']));
+				} else {
+					$comments = trim($_POST['phone']);
+				}
+			}
+		}
+		
 		//Check to make sure that the name field is not empty
 		if(trim($_POST['contactName']) === '') {
 			$nameError = '<br />Please enter your name.';
@@ -28,6 +43,7 @@ if(isset($_POST['submitted'])) {
 		} else {
 			$email = trim($_POST['email']);
 		}
+		
 			
 		//Check to make sure comments were entered	
 	/*	if(trim($_POST['comments']) === '') {
@@ -46,11 +62,12 @@ if(isset($_POST['submitted'])) {
 
 			$emailTo = '***REMOVED***';
 			$subject = 'Contact Form Submission from '.$name;
-			$sendCopy = trim($_POST['sendCopy']);
-			$body = "Name: $name \n\nEmail: $email \n\nQuestion:".$_POST['question']."\n\nComments: $comments";
-			$headers = 'From: WMAB <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+			$sendCopy = trim($_POST['comments']);
+			$body = "Name: $name \n\nEmail: $email \n\nPhone: ".$_POST['phone']." \n\nQuestion: ".$_POST['question']."\n\nComments: ".stripslashes($_POST['comments']);
+			$headers = 'From: WMAB <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email ."\n";
+			$headers .= "BCC: ***REMOVED***\n";
 			
-	//		mail($emailTo, $subject, $body, $headers);
+			wp_mail($emailTo, $subject, $body, $headers);
 
 			if($sendCopy == true) {
 				$subject = 'You emailed Your Name';
@@ -100,9 +117,7 @@ if(isset($emailSent) && $emailSent == true) {
 			<form name="form1" method="post" action="<?php the_permalink(); ?>">
             	  <p>
             	    <label for="name">Your Name *</label>
-            	    <input type="text" name="contactName" id="name" tabindex="1" value="
-            	    <?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
-   					class="requiredField" >
+            	    <input type="text" name="contactName" id="name" tabindex="1" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="requiredField" >
 					<?php if($nameError != '') { ?>
 						<span class="error"><?php echo $nameError;?></span> 
 					<?php } ?>            	  
@@ -117,9 +132,9 @@ if(isset($emailSent) && $emailSent == true) {
 					<?php } ?> 
 				</p>
 				<p>
-            	    <label>Your Phone Number</label>
+            	    <label>Your Phone Number xx-000-000-0000</label>
             	      <input type="text" name="phone" id="phone" tabindex="3">
-          	      
+						<span class="error"><?php echo $phoneError;?></span>
             	  </p>
             	  <p class="screenReader">
 					<label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label>
@@ -127,7 +142,7 @@ if(isset($emailSent) && $emailSent == true) {
 					  <?php if(isset($_POST['checking']))  echo $_POST['checking'];?>"
  					 />
 				</p>
-            	  <p>
+            	  <!--p>
             	    <label class="textarea-label">What is your question regarding?</label>
             	      <select name="question" id="question" tabindex="4">
             	        <option value="">Please Choose</option>
@@ -138,10 +153,11 @@ if(isset($emailSent) && $emailSent == true) {
           	          </select>
           	      
                   
-                  </p>
+                  </p-->
                          <br />
-                         <p>
-            	  <label>Tell us something about your inquiry:</label><br />
+                         <br />
+                <p>
+            	  <label class="textarea-label">Tell us something about your inquiry:</label><br />
             	    <textarea name="comments" id="inquiry" cols="45" rows="5"></textarea>
           	    
             	</p>
