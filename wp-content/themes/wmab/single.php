@@ -17,7 +17,7 @@
                     <div class="entry-textblock">
                 	<div class="entry-title"><?php the_title(); ?></div>
                     <span class="entry-date">
-                    	<?php the_time('F j, Y'); ?>
+                    	published on <?php the_time('F j, Y'); ?>
                     </span>
                     <p>
                     	<?php the_content(); ?>

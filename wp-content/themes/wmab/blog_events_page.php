@@ -4,6 +4,7 @@
 
 ?>
 <?php get_header(); ?>
+<meta http-equiv="refresh" content="0;url=http://www.facebook.com/whatmakesababy" />
 <div id="contentWrap">
 
     <?php get_sidebar(); ?>
@@ -26,10 +27,10 @@
                 	<div class="entry-textblock">
 				<div class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
                     <span class="entry-date">
-                    	<?php the_time('F j, Y'); ?>
+                    	published on <?php the_time('F j, Y'); ?>
                     </span>
                     <p>
-                    	<?php the_content(); ?>
+                    	<?php the_excerpt(); ?>
                     </p>
                     </div><!-- entry-textblock -->
                 </article>
