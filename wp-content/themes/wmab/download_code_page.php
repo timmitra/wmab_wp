@@ -72,12 +72,13 @@ if(isset($_POST['submitted'])) {
 
 
 			//$emailTo = '***REMOVED***';
+			//$emailTo = '***REMOVED***';
 			$emailTo = '***REMOVED***';
 			$subject = 'Book Downloaded by '.$name;
 			//$sendCopy = trim($_POST['comments']);
 			$body = "Name: $name \n\nEmail: $email \n\ndownload_code: ".$_POST['download_code']." \n\nFormat: ".$_POST['format']."\n\nIP Address: ".$_SERVER['REMOTE_ADDR'];
 			$headers = 'From: WMAB <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email ."\n";
-			$headers .= "BCC: ***REMOVED***\n";
+			//$headers .= "BCC: ***REMOVED***\n";
 			
 			wp_mail($emailTo, $subject, $body, $headers);
 
@@ -144,13 +145,11 @@ if(isset($emailSent) && $emailSent == true) {
 				case "ibooks":
 		?>
 		iBooks (iPad) format <a href="<?php echo get_post_meta($post->ID, 'ibook', true); ?>"><br />Click Here for iBooks</a><br /><br />
-
 		<?php
 				break;
 				case "kf8":
 		?>
 		Kindle Fire format <a href="<?php echo get_post_meta($post->ID, 'kf8', true); ?>"><br />Click Here for Kindle</a><br /><br />
-
 		<?php
 				default:
 				break;
@@ -160,7 +159,7 @@ if(isset($emailSent) && $emailSent == true) {
 	    <p>You may need to Right-Click or Control-Click on the link and choose "Download File as".</p>
 </div>
 
-<?php } else { ?>
+<?php } else if($foo == "foo") { ?>
 			<br />
 			<form name="form1" method="post" action="<?php the_permalink(); ?>">
             	  <p>
@@ -225,12 +224,14 @@ if(isset($emailSent) && $emailSent == true) {
             	</p-->
                             	<p>
                             	  <input type="hidden" name="submitted" id="submitted" value="true" />
-                            	  <input type="submit" name="submit" id="submit" value="Submit">
+                            	  <input type="submit" name="submitb" id="submit" value="Submit">
                             	</p>
                             	<p>* denotes a required field</p>
                             	<p>* please indicate your desired format</p>
                 </form>
-<?php } ?>
+<?php } else {
+	echo "<p style=\"color:white\">Sorry, you cannot download a book here. Please feel free to contact Cory</p>";
+}?>
 			</div><!-- entry-textblock -->
 			</div><!-- entry -->
         </div>

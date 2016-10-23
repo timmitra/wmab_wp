@@ -18,13 +18,15 @@
     	<div id="page-content">
         	<div class="entry">
             <div class="entry-textblock">
-        	<div class="entry-title">Coming Soon...</div>
-            <!--p>
-            <span class="entry-date"></span><br />This page would have  link to a downloadable PDF. And possibly would allow people to view the reader's guide online using some sort of viewer? For now just leave this blank.
+        	<div class="entry-title"></div>
+
+            <span class="entry-date"></span><br />Click on the cover below to download the Reader's Guide.
 			</p>
 			<p>
-				<img src="<?php echo get_template_directory_uri(); ?>/images/reader-guide-pdf.png" />
-			</p-->	
+				<a href="http://www.what-makes-a-baby.com/wp-content/uploads/2013/03/WMAB-Readers-Guide-opt.pdf">
+				<img src="http://www.what-makes-a-baby.com/wp-content/uploads/2013/03/WMAB-Readers-Guide1.png" width="400px" />
+				</a>
+			</p>	
 			</div><!-- entry-textblock -->
 			</div><!-- entry -->
         </div>
