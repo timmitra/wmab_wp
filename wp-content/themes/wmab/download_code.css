@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+	background-color: #316bdd;
+}
+#page-content .entry .entry-textblock p {
+	color: #58D6F5;
+}
+#page-content .entry .entry-textblock p .entry-code {
+	font-size: 15px;
+	line-height: 24px;
+	color: #FFF;
+}
+#page-content .entry .entry-textblock p .entry-price {
+	line-height: 32px;
+	color: #FFF;
+	font-size: 30px;
+}
+#page-content .entry .entry-textblock p .entry-disclaimer {
+	font-size: 20px;
+	line-height: 20px;
+	color: #F2F42B;
+}
+form ul li, aside#mailchimp form {
+	color: #58D6F5;
+}
+fieldset {
+	border: none;
+}

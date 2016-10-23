@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	
+	background-color: #EE6735;
+	
+}
+
+#page-content .entry .entry-title {
+	color: #f2f42b;
+}
+#page-content .entry .entry-textblock p, aside#mailchimp form {
+	color: #FFF;
+}
+
+.entry-textblock a:link, .entry-textblock a:visited {
+	color: #904ab5;
+}

@@ -1,0 +1,422 @@
+/*
+Theme Name: What Makes a baby Theme
+Theme URI: http://www.it-guy.com
+Description: A custom theme, built for WhatMakesABaby.com.
+Author: Tim Mitra
+Version: 1.00
+*/
+
+
+/* simple reset */
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #f2f42b;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-family: Verdana, Geneva, sans-serif;
+	padding-bottom: 1em;
+}
+
+em {
+	font-style:oblique;
+}
+
+
+@font-face {  
+  font-family: Ketchupa-smallcaps;  
+  src: url( fonts/Ketchupa-SmallCaps.ttf ) format("truetype");  
+}
+
+@font-face {  
+  font-family: Ketchupa;  
+  src: url( fonts/Ketchupa-Regular.ttf ) format("truetype");  
+}
+
+#outerWrapper {
+	width: 1025px;
+	margin: 0 auto;
+	min-height: 750px;
+}
+
+#contentWrap {
+	width: 100%;
+	min-height: 750px;
+	overflow: none;
+}
+
+#header {
+	height: 0;
+}
+
+#page-title {
+	font-family: Ketchupa;
+	font-size: 112px;
+	position: relative;
+	width: 555px;
+	top: 128px;
+	left: 47px;
+	color: white;
+	line-height: 85px;
+}
+
+#content {
+	float: left;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#sidebar {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 333px;
+	float: left;
+	z-index: 100;
+}
+
+aside#nav {
+	height: relative;
+}
+
+a.gocheckout {
+	font-family: Ketchupa;
+	font-size: 20px;
+	color:#FFF;
+}
+.shopping-cart-wrapper a.emptycart:link, .shopping-cart-wrapper a.emptycart:visited {
+	color:#FFF;
+}
+
+.table	{
+	background:#333;
+}
+.table ul {
+	float:left;
+	margin:0;
+	padding:0;
+	border:1px solid #C9C9C9;
+}
+
+.table ul li {
+	list-style:none;
+	padding:5px 10px;
+}
+.table ul li.title	{
+	font-weight:bold;
+	background:#333;
+	color:#fff;
+}
+.table ul li.even {
+	background:#fff
+}
+.table ul li.odd {
+	background:#FFFFE6
+}
+
+
+aside#mailchimp, div.widget-area {
+	position: relative;
+	left: 73px;
+	width: 300px;
+	bottom: 0px;
+	padding-top: 100px;
+}
+aside#mailchimp H3, div.widget-area h3 {
+	font-family: Ketchupa;
+	font-size: 30px;
+	line-height: 33px;
+	color: #FFF;
+	margin-top: 10px;
+}
+aside#mailchimp form, div.widget-area form {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #58D6F5;
+	width: 280px;
+}
+aside#mailchimp form div.mc-field-group, div.clear, .shopping-cart-wrapper, div.shopping-cart table, .shopping-cart-wrapper, .shoppingcart table {
+	width: 280px;
+}
+
+.cart_message, .shoppingcart, .empty {
+	color: #FFF;
+}
+
+th#product {
+	width: 120px;
+	color: #FFF;
+}
+th#price {
+	width: 80px;
+	color: #FFF;
+}
+th#quantity {
+	width: 50px;
+	color: #FFF;
+}
+th#remove {
+	width: 20px;
+	color: #FFF;
+}
+
+td.product-name a {
+	font-size: 20px;
+}
+
+td.cart-widget-remove, form.adjustform {
+	width: 20px !important;
+}
+
+aside#mailchimp form input, div.widget-area form input {
+	float: right;
+}
+
+/* checkout */
+
+#checkout_page_container {
+	position: relative;
+	left: 60px;
+	top: 200px;
+	color: #FFF;
+	font-family: Verdana, Geneva, sans-serif;
+	width: 450px;
+}
+
+#checkout_page_container h3 {
+	font-family: Ketchupa, Verdana, Geneva, sans-serif;
+	font-size: 30px;
+}
+
+#checkout_page_container form.wpsc_checkout_forms, table.wpsc_checkout_table {
+	width: 450px;
+}
+
+#checkout_page_container form input, #checkout_page_container form textarea {
+	float: right;
+	width: 250px;
+}
+
+#checkout_page_container #wpsc_shopping_cart_container, .wpsc_make_purchase {
+	margin-top: 50px;
+}
+
+#checkout_page_container table.checkout_cart {
+	width: 550px;
+}
+
+table.checkout_cart  {
+	border: 1px solid black;
+}
+table.checkout_cart tbody tr.header {
+	height: 30px;
+}
+
+table.checkout_cart tbody tr.header th {
+	max-width: 257px;
+}
+
+td.wpsc_product_image {
+	width: 50px;
+}
+
+td.wpsc_product_name {
+	width: 180px !important;
+	padding-left: 0px !important;
+}
+
+table.checkout_cart tbody tr.product_row {
+	height: 50px;
+}
+
+table.checkout_cart tbody tr td.wpsc_product_remove {
+	padding-top: 20px;
+}
+
+#checkout_page_container form.adjustform.qty input {
+	width: 56px;
+	position: relative;
+	left: 60px;
+}
+
+#checkout_page_container form.adjustform.remove input {
+	width: 56px;
+	position: relative;
+	left: 20px;
+}
+
+#wpsc_checkout_gravatar {
+	visibility:hidden;
+}
+/* navigation */
+
+#nav-bubbles {
+	position: relative;
+	left: 73px;
+	top: 49px;
+}
+#page-content {
+	/*font-family: Ketchupa;*/
+	font-size: 30px;
+	line-height: 30px;
+	color: #FFF;
+	position: relative;
+	left: 47px;
+	top: 175px;
+	width: 353px;
+}
+#page-content p {
+	/*font-family: Ketchupa;*/
+	font-size: 18px;
+	line-height: 20px;
+	color: #316bdd;
+}
+#page-content .entry-title, #page-content .entry-title a {
+	font-family: Ketchupa;
+	font-size: 30px;
+	line-height: 33px;
+	color: #FFF;
+}
+#page-content p .entry-date, .entry-textblock, .entry-date {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+#page-content .entry {
+	/* [disabled]padding-bottom: 60px; */
+	/* [disabled]float: left; */
+	/* [disabled]position: relative; */
+	width: 520px;
+}
+.entry-textblock {
+	width: 500px;
+	float:left;
+	/* [disabled]position: relative; */
+	top:0px;
+	vertical-align: top;
+	padding-bottom: 60px;
+}
+
+#cover-home {
+	margin-bottom: 50px;
+}
+
+#cover-video {
+	margin-left: 50px;
+}
+
+.entry-code, .entry-price, .entry-date {
+	font-family: Ketchupa;
+}
+
+.entry-image {
+	margin-right: 15px;
+	width: 146px;
+	/* [disabled]position: relative; */
+	/* [disabled]top:0px; */
+	float: left;
+}
+.entry-image img {
+	width: 146px;
+}
+
+footer {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	/*float: left;*/
+	clear: both;
+	/*text-align: center;*/
+	/*padding: 10px;*/
+	/*width: 100%;*/
+	/*margin: 0 auto;*/
+	/* because the content 
+	starts 125px from top
+	we add top here */
+	position: relative;
+	top: 125px;
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}
+
+footer p  {
+	margin-left: 375px;
+	width: 590px;
+}
+
+form {
+	width: 360px;
+	/*border: 1px solid #A7A4E2;*/
+	padding: 3px;
+}
+
+form input {
+	width: 130px;
+}
+
+form p label {
+	width: 190px;
+	float:left;
+}
+
+form p .textarea-label {
+	width: 100%;
+	line-height: 30px;
+}
+
+.textfieldRequiredMsg {
+	color: #F00;
+}
+
+.screenReader { 
+	left: -9999px; 
+	position: absolute; 
+	top: -9999px;
+}
+
+.error { 
+	color: #f00;
+}
+
+form ul li {
+	list-style-type: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+}
+
+form input[type=radio] {
+	padding: 0;
+	*width: 13px; 
+	*height: 13px;
+	 margin: 0; 
+	 vertical-align: baseline; 
+	 *vertical-align: middle;
+}
+
+div.entry-disclaimer {
+	font-size: 20px;
+	line-height: 20px;
+	color: #F2F42B;
+	margin-top: 100px;
+	position: relative;
+	left: 40px;
+}
+p span.entry-disclaimer {
+	font-size: 20px;
+	line-height: 20px;
+	color: #F2F42B;
+}
+

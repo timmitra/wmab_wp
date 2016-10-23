@@ -1,0 +1,47 @@
+body {
+	background-color: #F96EE8; /* pink */
+}
+
+a {
+	color: white;
+}
+
+#page-content .entry .entry-title {
+	color: #F2F42B;
+}
+
+#page-content .entry p, aside#mailchimp form {
+	color: #FFF;
+}
+
+#page-content p {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.screenReader { 
+	left: -9999px; 
+	position: absolute; 
+	top: -9999px;
+}
+
+.error { 
+	color: #f00;
+}
+
+.thanks { 
+	background: #F2F3F6; 
+	border: 1px solid #7E8AA2; 
+	padding:10px;
+	color: #694ee2;
+}
+
+#page-content .entry .entry-textblock .thanks p { 
+	color: #694ee2;
+}
+
+.entry-textblock a:link, .entry-textblock a:visited {
+	/*color: rgb(65, 171, 219); blue */
+	/*color: rgb(93, 169, 47); green */
+	color: #904ab5; /* vioilet */
+}

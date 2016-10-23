@@ -1,0 +1,120 @@
+@import (book.css);
+
+body {
+	background-color: #316bdd;
+}
+
+/*h2 {
+	font-family: Ketchupa;
+	font-size: 112px;
+	width: 555px;
+	left: 47px;
+	color: white;
+	line-height: 85px;
+}*/
+
+div.wpsc_default_product_list {
+	top: 128px;
+	left: 33px;
+	position: relative;
+}
+
+div.default_product_display {
+}
+
+#default_products_page_container {
+	width: 520px;
+}
+
+.entry-title {
+	font-family: Ketchupa;
+	font-size: 30px;
+	line-height: 33px;
+	color: white;
+	top: 58px;
+	position: relative;
+	padding-bottom: 10px;
+	/*left: 169px;*/
+}
+
+div.default_product_display, .entry-textblock {
+	width: 340px;
+	float:left;
+	/* [disabled]position: relative; */
+	top:10px;
+	margin-left: 15px;
+	vertical-align: top;
+	padding-bottom: 60px;
+}
+
+.entry-image {
+	top:58px;
+	left: 20px;
+	position: relative;
+	margin-right: 15px;
+}
+
+.imagecol img, .entry-image img, .product_image {
+	width: 146px;
+	margin-right: 15px;
+	width: 146px;
+	/* [disabled]position: relative; */
+	float: left;
+}
+
+/* Product Display */
+
+.wpsc_description, div.productcol {
+	width: 340px;
+}
+
+.wpsc_description p, div.entry-textblock p {
+	font-size: 18px;
+	line-height: 20px;
+	color: #58D6F5;
+}
+
+.entry-description {
+	padding-top: 30px;
+}
+
+.wpsc_product_title, .product-name a {
+	font-family: Ketchupa;
+	font-size: 30px;
+	line-height: 33px;
+	color: #FFF;
+}
+
+.pricedisplay, .wpsc_product_price {
+	font-family: Ketchupa;
+	font-size: 25px;
+	line-height: 27px;
+	color: #FFF;
+}
+
+img.product_image {
+	background-image: none;
+}
+
+/* Buy Button
+========================================== */
+input.wpsc_buy_button {
+	margin: 6px 0 6px;
+	padding: 0;
+	background: url('images/button-add-to-cart.png') no-repeat center top;
+	background-color: #316bdd;
+	color: #fff;
+	border: 0;
+	text-align: center;
+	cursor: pointer;
+}
+
+#content input.wpsc_buy_button {
+	font-family: Ketchupa;
+	font-size: 20px;
+}
+
+input.wpsc_buy_button {
+	width: 115px;
+	height: 33px;
+}

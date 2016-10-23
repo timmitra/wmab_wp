@@ -1,0 +1,14 @@
+/* CSS Document */
+
+body {
+	background-color: #4fd839;
+}
+
+#page-content p {
+	font-size: 15px;
+	line-height: 17px;
+}
+
+.entry-textblock .entry-date, aside#mailchimp form {
+	color: #316BDD;
+}

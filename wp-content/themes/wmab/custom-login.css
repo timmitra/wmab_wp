@@ -1,0 +1,45 @@
+/* Custom Wordpress Login Page Style */
+
+/* Page Background */
+html {
+	background: #eae2d5 url(bgi-mage-path);
+	margin: auto;
+	font-weight:bold;
+}
+/* Wordpress Logo Replacement (Don't forget to change width and height */
+h1 {
+	/*border: 1px red solid;*/
+}
+h1 a {
+	background:url(logo-path) 0 0 no-repeat;
+	width:290px;
+	height:150px;
+	margin-left: 10px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+/* Top Bar Background Color */
+body.login {
+	border-top-color:#dac6ad;
+}
+.message {
+	margin-bottom: 0px;
+}
+/* Login Button */
+#wp-submit {
+	/*background: #bc3d1d;
+	border: #f24643;*/
+}
+/* Lost Password Link */
+.login #nav a, .login #nav a:hover {
+	color: #443030!important;;
+}
+/* Top Bar Link */
+.login p#backtoblog a:link, .login p#backtoblog a:visited {
+	color:#443030;
+	font-weight: bold;
+}
+.login p#backtoblog a:hover, .login p#backtoblog a:active {
+	color:#443030;
+	text-decoration:underline;
+}

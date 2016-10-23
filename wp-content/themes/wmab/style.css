@@ -1,0 +1,407 @@
+/*
+Theme Name: What Makes a baby Theme
+Theme URI: http://www.it-guy.com
+Description: A custom theme, built for WhatMakesABaby.com.
+Author: Tim Mitra
+Version: 1.00
+*/
+
+
+/* simple reset */
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #f2f42b;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-family: Verdana, Geneva, sans-serif;
+	padding-bottom: 1em;
+}
+
+em {
+	font-style:oblique;
+}
+
+
+@font-face {  
+  font-family: Ketchupa-smallcaps;  
+  src: url( fonts/Ketchupa-SmallCaps.ttf ) format("truetype");  
+}
+
+@font-face {  
+  font-family: Ketchupa;  
+  src: url( fonts/Ketchupa-Regular.ttf ) format("truetype");  
+}
+
+#outerWrapper {
+	width: 1025px;
+	margin: 0 auto;
+	min-height: 750px;
+}
+
+#contentWrap {
+	width: 100%;
+	min-height: 750px;
+	overflow: none;
+}
+
+#header {
+	height: 0;
+}
+
+#page-title {
+	font-family: Ketchupa;
+	font-size: 112px;
+	position: relative;
+	width: 555px;
+	top: 128px;
+	left: 47px;
+	color: white;
+	line-height: 85px;
+}
+
+#content {
+	float: left;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#sidebar {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 333px;
+	float: left;
+	z-index: 100;
+}
+
+aside#nav {
+	height: relative;
+}
+aside#mailchimp {
+	position: relative;
+	left: 73px;
+	width: 300px;
+	bottom: 0px;
+	padding-top: 300px;
+}
+aside#mailchimp H3 {
+	font-family: Ketchupa;
+	font-size: 30px;
+	line-height: 33px;
+	color: #FFF;
+}
+aside#mailchimp form {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #58D6F5;
+}
+aside#mailchimp form div.mc-field-group, div.clear {
+	width: 280px;
+}
+aside#mailchimp form input{
+	float: right;
+}
+#nav-bubbles {
+	position: relative;
+	left: 73px;
+	top: 49px;
+}
+#page-content {
+	/*font-family: Ketchupa;*/
+	font-size: 30px;
+	line-height: 30px;
+	color: #FFF;
+	position: relative;
+	left: 47px;
+	top: 175px;
+	width: 353px;
+}
+#page-content p {
+	/*font-family: Ketchupa;*/
+	font-size: 18px;
+	line-height: 20px;
+	color: #316bdd;
+}
+#page-content .entry-title, #page-content .entry-title a {
+	font-family: Ketchupa;
+	font-size: 30px;
+	line-height: 33px;
+	color: #FFF;
+}
+#page-content p .entry-date, .entry-textblock, .entry-date {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+#page-content .entry {
+	/* [disabled]padding-bottom: 60px; */
+	/* [disabled]float: left; */
+	/* [disabled]position: relative; */
+	width: 520px;
+}
+.entry-textblock {
+	width: 500px;
+	float:left;
+	/* [disabled]position: relative; */
+	top:0px;
+	vertical-align: top;
+	padding-bottom: 60px;
+}
+
+#cover-home {
+	margin-bottom: 50px;
+}
+
+#cover-video {
+	margin-left: 50px;
+}
+
+.entry-code, .entry-price, .entry-date {
+	font-family: Ketchupa;
+}
+
+.entry-image {
+	margin-right: 15px;
+	width: 146px;
+	/* [disabled]position: relative; */
+	/* [disabled]top:0px; */
+	float: left;
+}
+.entry-image img {
+	width: 146px;
+}
+
+footer {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	color: #FFF;
+	/*float: left;*/
+	clear: both;
+	/*text-align: center;*/
+	/*padding: 10px;*/
+	/*width: 100%;*/
+	/*margin: 0 auto;*/
+	/* because the content 
+	starts 125px from top
+	we add top here */
+	position: relative;
+	top: 125px;
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}
+
+footer p  {
+	margin-left: 375px;
+	width: 590px;
+}
+
+form {
+	width: 360px;
+	/*border: 1px solid #A7A4E2;*/
+	padding: 3px;
+}
+
+form input {
+	width: 130px;
+}
+
+form p label {
+	width: 190px;
+	float:left;
+}
+
+form p .textarea-label {
+	width: 100%;
+	line-height: 30px;
+}
+
+.textfieldRequiredMsg {
+	color: #F00;
+}
+
+.screenReader { 
+	left: -9999px; 
+	position: absolute; 
+	top: -9999px;
+}
+
+.error { 
+	color: #f00;
+}
+
+form ul li {
+	list-style-type: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+}
+
+form input[type=radio] {
+	padding: 0;
+	*width: 13px; 
+	*height: 13px;
+	 margin: 0; 
+	 vertical-align: baseline; 
+	 *vertical-align: middle;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Buy Button
+========================================== */
+input.wpsc_buy_button {
+	margin: 6px 0 6px;
+	padding: 0;
+	background: url('images/button-add-to-cart.png') no-repeat center top;
+	background-color: #316bdd;
+	color: #fff;
+	border: 0;
+	text-align: center;
+	cursor: pointer;
+}
+
+#content input.wpsc_buy_button {
+	font-family: Ketchupa;
+	font-size: 20px;
+}
+
+
+div#mc_embed_signup form {
+	/*border: 1px white solid;*/
+	width: 380px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+div#mc_embed_signup form input{
+	width: 200px;
+	font-size: 16px;
+	float: right;
+}
+div#mc_embed_signup form input.wpsc_buy_button,  input.wpsc_buy_button {
+	width: 115px;
+	height: 33px;
+	clear: both;
+}
+
+.entry-textblock a {
+	color: white;
+}
+
+.entry-price {
+	font-size: 28px;
+}
+
+/* sidebar */
+
+div.widget-area {
+	position: relative;
+	left: 90px;
+	width: 280px;
+	bottom: 0px;
+	padding-top: 100px;
+}
+div.widget-area h3 {
+	font-family: Ketchupa;
+	font-size: 30px;
+	line-height: 33px;
+	color: #FFF;
+	margin-top: 10px;
+}
+
+div.widget-area li {
+	list-style:none;
+	font-family: Verdana, Geneva, sans-serif;
+}
+div.widget-area li a:link{
+	color: white;
+}
+div.widget-area li a:visited{
+	color: #FFD;
+}
+
+/* shopping cart */
+
+table.checkout_cart {
+	width: 600px;
+	border: 1px black solid;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Verdana, Geneva, sans-serif;
+	border-collapse:collapse;
+}
+
+table.checkout_cart form {
+	width: 50px;
+}
+
+table.checkout_cart form input{
+	width: 64px;
+}
+
+table.checkout_cart th, table.checkout_cart td {
+	padding: 5px;
+	border: 2px white solid;
+}
+
+td.wpsc_product_image {
+	width: 60px;
+	color: #FFF;
+	vertical-align: middle;
+}
+td.wpsc_product_price {
+	width: 86px;
+	color: #FFF;
+}
+td.wpsc_product_quantity {
+	width: 59px;
+	color: #FFF;
+}
+td.wpsc_product_remove {
+	width: 68px;
+	color: #FFF;
+}
+
+td.product-name a {
+	font-size: 20px;
+}
+
+td.cart-widget-remove, form.adjustform {
+	width: 20px !important;
+}
+
+.cart-msg {
+	font-size:small;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#post-2 img {
+	/*width: 400px;*/
+}
