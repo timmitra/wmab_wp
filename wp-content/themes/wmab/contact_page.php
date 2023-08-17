@@ -60,12 +60,12 @@ if(isset($_POST['submitted'])) {
 		//If there is no error, send the email
 		if(!isset($hasError)) {
 
-			$emailTo = '***REMOVED***';
+			$emailTo = 'cory.silverberg@gmail.com';
 			$subject = 'Contact Form Submission from '.$name;
 			$sendCopy = trim($_POST['comments']);
 			$body = "Name: $name \n\nEmail: $email \n\nPhone: ".$_POST['phone']." \n\nQuestion: ".$_POST['question']."\n\nComments: ".stripslashes($_POST['comments']);
 			$headers = 'From: WMAB <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email ."\n";
-			$headers .= "BCC: ***REMOVED***\n";
+			$headers .= "BCC: tim@example\n";
 			
 			wp_mail($emailTo, $subject, $body, $headers);
 

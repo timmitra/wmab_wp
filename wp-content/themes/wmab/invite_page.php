@@ -44,7 +44,7 @@ if(isset($_POST['submitted'])) {
 		//If there is no error, send the email
 		if(!isset($hasError)) {
 
-			$emailTo = '***REMOVED***';
+			$emailTo = 'cory.silverberg@gmail.com';
 			$subject = 'Invite Form Submission from '.$name;
 			$sendCopy = trim($_POST['comments']);
 			$body = "Name: $name \n\nEmail: $email \n\nPhone: ".$_POST['phone']." \n\nQuestion: ".$_POST['question']."\n\nComments: ".$_POST['comments'];
