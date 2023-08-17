@@ -31,7 +31,7 @@ if(isset($_POST['submitted'])) {
 		
 		//Check the download code
 		if (get_post_meta($post->ID, 'download-code', true) === "") {
-			$valid_code = "***REMOVED***";
+			$valid_code = "DEADBEEF";
 		} else {
 			$valid_code = get_post_meta($post->ID, 'download-code', true);
 		}
@@ -71,9 +71,7 @@ if(isset($_POST['submitted'])) {
 			) );
 
 
-			//$emailTo = '***REMOVED***';
-			//$emailTo = '***REMOVED***';
-			$emailTo = '***REMOVED***';
+			$emailTo = 'contest@example.com';
 			$subject = 'Book Downloaded by '.$name;
 			//$sendCopy = trim($_POST['comments']);
 			$body = "Name: $name \n\nEmail: $email \n\ndownload_code: ".$_POST['download_code']." \n\nFormat: ".$_POST['format']."\n\nIP Address: ".$_SERVER['REMOTE_ADDR'];
