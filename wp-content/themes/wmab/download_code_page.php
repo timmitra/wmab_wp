@@ -76,7 +76,7 @@ if(isset($_POST['submitted'])) {
 			//$sendCopy = trim($_POST['comments']);
 			$body = "Name: $name \n\nEmail: $email \n\ndownload_code: ".$_POST['download_code']." \n\nFormat: ".$_POST['format']."\n\nIP Address: ".$_SERVER['REMOTE_ADDR'];
 			$headers = 'From: WMAB <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email ."\n";
-			//$headers .= "BCC: ***REMOVED***\n";
+			//$headers .= "BCC: tim@example\n";
 			
 			wp_mail($emailTo, $subject, $body, $headers);
 

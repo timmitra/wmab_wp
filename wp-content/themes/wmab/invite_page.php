@@ -49,7 +49,7 @@ if(isset($_POST['submitted'])) {
 			$sendCopy = trim($_POST['comments']);
 			$body = "Name: $name \n\nEmail: $email \n\nPhone: ".$_POST['phone']." \n\nQuestion: ".$_POST['question']."\n\nComments: ".$_POST['comments'];
 			$headers = 'From: WMAB <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email ."\n";
-			$headers .= "BCC: ***REMOVED***\n";
+			$headers .= "BCC: tim@example\n";
 			
 			mail($emailTo, $subject, $body, $headers);
 
